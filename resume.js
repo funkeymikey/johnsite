@@ -13,6 +13,21 @@ resume.config(function($routeProvider, $locationProvider) {
       controller: 'resumeCtrl',
       caseInsensitiveMatch: true
     })
+    .when('/rockwell', {
+      templateUrl: '/views/rockwell.html',
+      controller: 'resumeCtrl',
+      caseInsensitiveMatch: true
+    })
+    .when('/theatre', {
+      templateUrl: '/views/theatre.html',
+      controller: 'resumeCtrl',
+      caseInsensitiveMatch: true
+    })
+    .when('/former-employers', {
+      templateUrl: '/views/former-employers.html',
+      controller: 'resumeCtrl',
+      caseInsensitiveMatch: true
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -27,11 +42,15 @@ resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
     $location.path(path);
   };
 
-  $scope.open = function (template) {
+  $scope.open = function (filename, description) {
+    $scope.imageUrl = '/images/' + filename;
+    $scope.imageDescription = description;
+
     var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
+      animation: true,
       size: 'lg',
-      templateUrl: template
+      templateUrl: 'info-modal',
+      scope: $scope
     });
   };
 });

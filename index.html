@@ -30,30 +30,21 @@
       </div>
 		</header>
 
-    <div class="navigation text-center">
+
+    <nav class="navigation text-center">
       <ul>
         <li><a ng-href="burchfield">Burchfield</a></li>
         <li><a ng-href="rockwell">Rockwell</a></li>
         <li><a ng-href="theatre">Theatre</a></li>
-        <li><a ng-href="other">Other</a></li>
+        <li><a ng-href="former">Former Employers</a></li>
       </ul>
-    </div>
+    </nav>
 
 
 		<section id="content">
       <ng-view></ng-view>
 		</section>
 
-
-		<!-- <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-8 col-md-offset-2">
-		        <p>footer 2</p>
-          </div>
-        </div>
-      </div>
-		</footer> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
@@ -62,14 +53,20 @@
     <script src="ui-bootstrap-custom-tpls-1.2.5.js"></script>
 		<script src="resume.js"></script>
 
-		<!-- <script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-48724111-1', 'auto');
-		  ga('send', 'pageview');
-		</script> -->
+    <script type="text/ng-template" id="info-modal">
+    	<div class="container-fluid modal-window">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <img class="img-responsive center-block" ng-src="{{imageUrl}}" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center modal-description">
+            {{imageDescription}}
+          </div>
+        </div>
+      </div>
+    </script>
 
 	</body>
 </html

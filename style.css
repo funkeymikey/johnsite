@@ -24,6 +24,7 @@ a, .link {
   color: white;
   width:100%;
 }
+ul { padding: 0;}
 
 .navigation ul {
   	list-style-type: none;
@@ -35,16 +36,26 @@ a, .link {
 .navigation ul li a {
   color: white;
   text-decoration: none;
-  padding: 17px 0;
+  /*padding: 17px 0;*/
   font-family: 'Economica',sans-serif;
   font-size: 26px;
   color: #fff;
   font-weight: bold;
-  margin: 0 15px;
+  /*margin: 0 15px;*/
 }
 
-section + section {
-  margin-top: 30px;
+.navigation ul li + li  {
+  margin-left: 15px;
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+.project + .project {
+  margin-top: 45px;
+  border-top: 1px #ccc solid;
+  padding-top: 45px;
 }
 
 .image-wrapper {
