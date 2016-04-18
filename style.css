@@ -7,21 +7,36 @@ a {
   color: #333;
 }
 
-header .container {
+header {
   border-bottom: 4px #333 solid;
 }
 
-#intro{
+#content{
   margin-top: 30px;
 }
+
 
 .navigation{
   background-color: #f58220;
   color: white;
-  height:30px;
+  height:40px;
   width:100%;
 }
 
-section + section{
-  margin-top: 300px;
+.navigation ul {
+  	list-style-type: none;
+}
+.navigation ul li {
+  display: inline;
+}
+
+.navigation ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 17px 0;
+  font-family: 'Economica',sans-serif;
+  font-size: 26px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
 }
