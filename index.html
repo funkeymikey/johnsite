@@ -9,14 +9,17 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <base href="/">
+
 	</head>
-	<body  ng-controller="resumeCtrl">
+	<body ng-controller="resumeCtrl">
 
 		<header>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h1>John B. Malinowski</h1>
+            <h1 class="link" ng-click="setView('/')">John B. Malinowski</h1>
             <p>
               125 Covington Road &bull; Buffalo, New York 14216 <br />
               <a href="mailto:johnbmalinowski@gmail.com">johnbmalinowski@gmail.com</a> <br />
@@ -29,10 +32,10 @@
 
     <div class="navigation text-center">
       <ul>
-        <li><a ng-click="setView('burchfield.html')">Burchfield</a></li>
-        <li><a ng-click="setView('rockwell.html')">Rockwell</a></li>
-        <li><a ng-click="setView('theatre.html')">Theatre</a></li>
-        <li><a ng-click="setView('other.html')">Other</a></li>
+        <li><a ng-href="burchfield">Burchfield</a></li>
+        <li><a ng-href="rockwell">Rockwell</a></li>
+        <li><a ng-href="theatre">Theatre</a></li>
+        <li><a ng-href="other">Other</a></li>
       </ul>
     </div>
 
@@ -53,6 +56,10 @@
 		</footer> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="ui-bootstrap-custom-1.2.5.js"></script>
+    <script src="ui-bootstrap-custom-tpls-1.2.5.js"></script>
 		<script src="resume.js"></script>
 
 		<!-- <script>
