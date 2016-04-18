@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html >
+<html ng-app="resume">
 	<head>
 		<title>John B. Malinowski</title>
 
@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
+	<body  ng-controller="resumeCtrl">
 
 		<header>
       <div class="container">
@@ -18,32 +18,42 @@
           <div class="col-xs-12 text-center">
             <h1>John B. Malinowski</h1>
             <p>
-              125 Covington Road &bull; Buffalo, New York 14216 &bull; <a href="tel:5855067606">(585) 506-7606</a> <br />
-              <a href="mailto:johnbmalinowski@gmail.com">johnbmalinowski@gmail.com</a>
+              125 Covington Road &bull; Buffalo, New York 14216 <br />
+              <a href="mailto:johnbmalinowski@gmail.com">johnbmalinowski@gmail.com</a> <br />
+               <a href="tel:5855067606">(585) 506-7606</a> <br />
               </p>
           </div>
         </div>
       </div>
 		</header>
+    <div class="navigation text-center">
+      <ul>
+        <li><a ng-click="setView(burchfield.html)">Burchfield</a></li>
+        <li><a href="setView(rockwell.html)">Rockwell</a></li>
+        <li><a href="setView(theatre.html)">Theatre</a></li>
+        <li><a href="setView(other.html)">Other</a></li>
+      </ul>
+    </div>
 
 
-		<section>
-			Something else
-		</section>
-
-		<section>
-			something secondary
+		<section id="content">
+      <div ng-include="view"></div>
 		</section>
 
 
 
 		<footer>
-		footer 2
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+		        <p>footer 2</p>
+          </div>
+        </div>
+      </div>
 		</footer>
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.js"></script>
-		<script src="scripts/resume.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+		<script src="resume.js"></script>
 
 		<!-- <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

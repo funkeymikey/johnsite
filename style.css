@@ -8,5 +8,20 @@ a {
 }
 
 header .container {
-  border-bottom: 2px #333 solid;
+  border-bottom: 4px #333 solid;
+}
+
+#intro{
+  margin-top: 30px;
+}
+
+.navigation{
+  background-color: #f58220;
+  color: white;
+  height:30px;
+  width:100%;
+}
+
+section + section{
+  margin-top: 300px;
 }
