@@ -42,9 +42,8 @@ resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
     $location.path(path);
   };
 
-  $scope.open = function (filename, description) {
+  $scope.open = function (filename) {
     $scope.imageUrl = '/images/' + filename;
-    $scope.imageDescription = description;
 
     var modalInstance = $uibModal.open({
       animation: true,
