@@ -23,8 +23,8 @@ resume.config(function($routeProvider, $locationProvider) {
       controller: 'resumeCtrl',
       caseInsensitiveMatch: true
     })
-    .when('/former-employers', {
-      templateUrl: '/views/former-employers.html',
+    .when('/previous', {
+      templateUrl: '/views/former.html',
       controller: 'resumeCtrl',
       caseInsensitiveMatch: true
     })
@@ -37,6 +37,16 @@ resume.config(function($routeProvider, $locationProvider) {
 });
 
 resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
+
+  $scope.myInterval = 5000;
+    $scope.noWrapSlides = false;
+    $scope.active = 1;
+
+  $scope.slides = [
+    { image: '/images/IMG_3561.JPG', text:'something about the first image', id:'1'},
+    { image: '/images/IMG_3562.JPG', text:'something about the second image', id:'2'},
+    { image: '/images/IMG_3563.JPG', text:'something about the third image', id:'3'}
+  ];
 
   $scope.setView = function(path){
     $location.path(path);
