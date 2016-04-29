@@ -45,25 +45,36 @@ resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
    var currIndex = 0;
 
    slides.push({
-     image: '/images/1280_profile.jpg',
-     text: 'Nice image',
+     image: '/images/bpac/Aud/cuomo.jpg',
      id: currIndex++
    });
    slides.push({
      image: '/images/IMG_3570.JPG',
-     text: 'Awesome photograph',
+     id: currIndex++
+   });
+
+   slides.push({
+     image: '/images/bpac/yard/FY1.jpg',
      id: currIndex++
    });
    slides.push({
-     image: '/images/IMG_3563.JPG',
-     text: 'That is so cool',
+     image: '/images/rockwell/performers/p3.jpg',
      id: currIndex++
    });
    slides.push({
-     image: '/images/IMG_3564.JPG',
-     text: 'I love that',
+     image: '/images/theatre/flex/f1.jpg',
      id: currIndex++
    });
+   slides.push({
+     image: '/images/previous/studio/s1.jpg',
+     id: currIndex++
+   });
+   slides.push({
+     image: '/images/theatre/upton/u1.jpg',
+     id: currIndex++
+   });
+
+
 
   $scope.setView = function(path){
     $location.path(path);
