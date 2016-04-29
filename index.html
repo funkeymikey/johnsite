@@ -13,13 +13,13 @@
     <base href="/">
 
 	</head>
-	<body ng-controller="resumeCtrl">
+	<body>
 
 		<header>
       <div class="container">
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h1 class="link" ng-click="setView('/')">John B. Malinowski</h1>
+            <h1 class="link"><a href="/">John B. Malinowski</a></h1>
             <p>
               125 Covington Road &bull; Buffalo, New York 14216 <br />
               <a href="mailto:johnbmalinowski@gmail.com">johnbmalinowski@gmail.com</a> <br />
@@ -32,12 +32,29 @@
 
 
     <nav class="navigation text-center">
-      <ul>
-        <li><a ng-href="burchfield">Burchfield</a></li>
-        <li><a ng-href="rockwell">Rockwell</a></li>
-        <li><a ng-href="theatre">Theatre</a></li>
-        <li><a ng-href="previous">Previous Employment</a></li>
-      </ul>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 hidden-sm hidden-xs">
+			      <ul>
+			        <li><a ng-href="burchfield">Burchfield</a></li>
+			        <li><a ng-href="rockwell">Rockwell</a></li>
+			        <li><a ng-href="theatre">Theatre</a></li>
+			        <li><a ng-href="previous">Previous Employment</a></li>
+			      </ul>
+					</div>
+					<div class="col-xs-12 hidden-md hidden-lg">
+						{{currentPage}}
+						<div class="form-group">
+				      <select id="sel1" class="form-control drop-down-nav" ng-model="currentPath" ng-change="navigate()"
+								ng-options='option.path as option.name for option in pages'
+							>
+									<!-- <option ng-repeat="page in pages" value="{{$index}}" ng-selected={{$index==currentPageNum}}>{{page.name}}</option> -->
+							</select>
+
+						</div>
+					</div>
+				</div>
+			</div>
     </nav>
 
 

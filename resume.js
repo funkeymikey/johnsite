@@ -36,6 +36,27 @@ resume.config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 });
 
+resume.run(function($rootScope, $location){
+  $rootScope.pages = [
+    {name:"Home", path:"/"},
+    {name:"Bufchfield", path:"/burchfield"},
+    {name:"Rockwell", path:"/rockwell"},
+    {name:"Theatre", path:"/theatre"},
+    {name:"Previous Employment", path:"/previous"}
+  ];
+
+  $rootScope.navigate = function(){
+    $location.path($rootScope.currentPath);
+  };
+
+  $rootScope.currentPath = $location.path();
+
+
+  $rootScope.$on("$routeChangeStart", function (event, next, old) {
+    $rootScope.currentPath = next.$$route.originalPath;
+  });
+});
+
 resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
 
   $scope.myInterval = 5000;
@@ -73,12 +94,6 @@ resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
      image: '/images/theatre/upton/u1.jpg',
      id: currIndex++
    });
-
-
-
-  $scope.setView = function(path){
-    $location.path(path);
-  };
 
   $scope.open = function (filename) {
     $scope.imageUrl = '/images/' + filename;
