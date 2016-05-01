@@ -39,7 +39,7 @@ resume.config(function($routeProvider, $locationProvider) {
 resume.run(function($rootScope, $location){
   $rootScope.pages = [
     {name:"Home", path:"/"},
-    {name:"Bufchfield", path:"/burchfield"},
+    {name:"Burchfield", path:"/burchfield"},
     {name:"Rockwell", path:"/rockwell"},
     {name:"Theatre", path:"/theatre"},
     {name:"Previous Employment", path:"/previous"}
