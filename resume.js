@@ -28,6 +28,11 @@ resume.config(function($routeProvider, $locationProvider) {
       controller: 'resumeCtrl',
       caseInsensitiveMatch: true
     })
+    .when('/accolades', {
+      templateUrl: '/views/accolades.html',
+      controller: 'resumeCtrl',
+      caseInsensitiveMatch: true
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -42,7 +47,8 @@ resume.run(function($rootScope, $location){
     {name:"Burchfield", path:"/burchfield"},
     {name:"Rockwell", path:"/rockwell"},
     {name:"Theatre", path:"/theatre"},
-    {name:"Previous Employment", path:"/previous"}
+    {name:"Previous Employment", path:"/previous"},
+    {name:"Accolades", path:"/accolades"}
   ];
 
   $rootScope.navigate = function(){

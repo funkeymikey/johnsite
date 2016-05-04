@@ -34,21 +34,20 @@
     <nav class="navigation text-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 hidden-sm hidden-xs">
+					<div class="col-lg-12 hidden-md hidden-sm hidden-xs">
 			      <ul>
 			        <li><a ng-href="burchfield">Burchfield</a></li>
 			        <li><a ng-href="rockwell">Rockwell</a></li>
 			        <li><a ng-href="theatre">Theatre</a></li>
 			        <li><a ng-href="previous">Previous Employment</a></li>
+							<li><a ng-href="accolades">Accolades</a></li>
 			      </ul>
 					</div>
-					<div class="col-xs-12 hidden-md hidden-lg">
+					<div class="col-xs-12 hidden-lg">
 						{{currentPage}}
 						<div class="form-group">
 				      <select id="sel1" class="form-control drop-down-nav" ng-model="currentPath" ng-change="navigate()"
-								ng-options='option.path as option.name for option in pages'
-							>
-									<!-- <option ng-repeat="page in pages" value="{{$index}}" ng-selected={{$index==currentPageNum}}>{{page.name}}</option> -->
+								ng-options='option.path as option.name for option in pages'>
 							</select>
 
 						</div>
