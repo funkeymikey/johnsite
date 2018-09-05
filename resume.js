@@ -72,7 +72,7 @@ resume.controller('resumeCtrl', function ($scope, $uibModal, $location) {
    var currIndex = 0;
 
    slides.push({
-     image: '/images/bpac/Aud/cuomo.jpg',
+     image: '/images/bpac/aud/cuomo.jpg',
      id: currIndex++
    });
    slides.push({
